@@ -12,6 +12,11 @@
 	</form>
 	<script src="jquery.js"></script>
 	<script>
+	$.post('load.php', function( data ){
+		if ( data ) {
+			$('#content').val( data );
+		};
+	});
 	//listen button click
 	$('form').on('submit', function( e ){
 		
